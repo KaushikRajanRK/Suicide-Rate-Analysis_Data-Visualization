@@ -1,0 +1,604 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (causes of death)' inline='true' name='federated.0puf5g41a0glqi12na23g0732en1' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='causes of death' name='excel-direct.17dxlrl0kfmhma1g5rdym1x97xy5'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/dataset/causes of death.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.17dxlrl0kfmhma1g5rdym1x97xy5' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:B12:no:A1:B12:0' header='yes' outcome='2'>
+            <column datatype='string' name='Cause' ordinal='0' />
+            <column datatype='real' name='Death percentage' ordinal='1' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Cause</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Cause]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Cause</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Death percentage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Death percentage]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>Death percentage</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:B12:no:A1:B12:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <column datatype='string' name='[Cause]' role='dimension' type='nominal' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column-instance column='[Cause]' derivation='None' name='[none:Cause:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.482432' measure-ordering='alphabetic' measure-percentage='0.517568' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Cause:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Accidents (unintentional injuries)&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Diabetes mellitus&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;Nephritis, nephrotic syndrome and nephrosis&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;Heart disease&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;Alzheimer`s disease&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;Influenza and pneumonia&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Intentional self-harm (suicide)&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;Malignant neoplasms&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Cerebrovascular diseases&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;Chronic lower respiratory diseases&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Causes of Deaths in USA (in Percentage)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Causes of Deaths in USA in 2017 (in Percentage)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (causes of death)' name='federated.0puf5g41a0glqi12na23g0732en1' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0puf5g41a0glqi12na23g0732en1'>
+            <column datatype='string' name='[Cause]' role='dimension' type='nominal' />
+            <column datatype='real' name='[Death percentage]' role='measure' type='quantitative' />
+            <column-instance column='[Cause]' derivation='None' name='[none:Cause:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Death percentage]' derivation='Sum' name='[sum:Death percentage:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='944' />
+            <format attr='cell-h' value='944' />
+            <format attr='cell' value='118' />
+            <format attr='cell-q' value='590' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <encodings>
+              <color column='[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]' />
+              <wedge-size column='[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]' />
+              <size column='[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Accidents (unintentional injuries)&quot;</value>
+                <value>6.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Alzheimer`s disease&quot;</value>
+                <value>4.2999999999999998</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Cerebrovascular diseases&quot;</value>
+                <value>5.2000000000000002</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Chronic lower respiratory diseases&quot;</value>
+                <value>5.7000000000000002</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Diabetes mellitus&quot;</value>
+                <value>3.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Heart disease&quot;</value>
+                <value>23.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Influenza and pneumonia&quot;</value>
+                <value>2.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Intentional self-harm (suicide)&quot;</value>
+                <value>1.7</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Malignant neoplasms&quot;</value>
+                <value>21.300000000000001</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Nephritis, nephrotic syndrome and nephrosis&quot;</value>
+                <value>1.8</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields />
+                  <y-fields />
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+                  <field>[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;Other&quot;</value>
+                <value>26.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+        <annotations>
+          <annotation class='point' id='0' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontalignment='1'>Death by Suicide</run>
+              <run fontalignment='1'>&#10;46653 people die by commiting suicide out of 2,744,248 total number of deaths in USA in 2017</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord cell-offset='0.492585'>
+                  <node-reference />
+                </x-coord>
+                <y-coord cell-offset='0.731992'>
+                  <node-reference />
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='227' y='83' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Causes of Deaths in USA (in Percentage)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+          <strip size='300'>
+            <card pane-specification-id='0' param='[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]' type='color' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='2147483647'>
+            <card pane-specification-id='0' param='[federated.0puf5g41a0glqi12na23g0732en1].[sum:Death percentage:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0puf5g41a0glqi12na23g0732en1].[none:Cause:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Causes of Deaths in USA (in Percentage)' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>

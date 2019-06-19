@@ -1,0 +1,1014 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <SortTagCleanup />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='fr scaling' inline='true' name='federated.0sz9hvx1qlzn6317lz4wa0cmik5m' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fr scaling' name='textscan.1vggh6n0ket29k1fkxc8w1vsmdfi'>
+            <connection class='textscan' directory='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/dataset' filename='fr scaling.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1vggh6n0ket29k1fkxc8w1vsmdfi' name='fr scaling.csv' table='[fr scaling#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_GB' separator=','>
+            <column datatype='string' name='country' ordinal='0' />
+            <column datatype='integer' name='year' ordinal='1' />
+            <column datatype='real' name='Life Ladder' ordinal='2' />
+            <column datatype='integer' name='gdp_per_capita ($)' ordinal='3' />
+            <column datatype='integer' name='Suicide Count' ordinal='4' />
+            <column datatype='real' name='Life Ladder(Normalized)' ordinal='5' />
+            <column datatype='real' name='gdp_per_capita ($)(Normalized)' ordinal='6' />
+            <column datatype='real' name='Suicide Count(Normalized)' ordinal='7' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Life Ladder</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Life Ladder]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>Life Ladder</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp_per_capita ($)</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[gdp_per_capita ($)]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>gdp_per_capita ($)</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Suicide Count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Suicide Count]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>Suicide Count</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Life Ladder(Normalized)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Life Ladder(Normalized)]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>Life Ladder(Normalized)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gdp_per_capita ($)(Normalized)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gdp_per_capita ($)(Normalized)]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>gdp_per_capita ($)(Normalized)</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Suicide Count(Normalized)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Suicide Count(Normalized)]</local-name>
+            <parent-name>[fr scaling.csv]</parent-name>
+            <remote-alias>Suicide Count(Normalized)</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Happiness Index(Normalized)' datatype='real' name='[Life Ladder(Normalized)]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='gdp per capita ($)(Normalized)' datatype='real' name='[gdp_per_capita ($)(Normalized)]' role='measure' type='quantitative' />
+      <column caption='Gdp Per Capita ($)' datatype='integer' name='[gdp_per_capita ($)]' role='measure' type='quantitative' />
+      <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <column-instance column='[Forecast Indicator]' derivation='None' forecast-column-base='[Forecast Indicator]' forecast-column-type='forecast-indicator' name='[none:Forecast Indicator:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.377027' measure-ordering='alphabetic' measure-percentage='0.622973' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <default-sorts>
+        <manual-sort column='[none:Forecast Indicator:nk]' direction='ASC'>
+          <dictionary>
+            <bucket>&quot;Actual&quot;</bucket>
+            <bucket>&quot;Estimate&quot;</bucket>
+          </dictionary>
+        </manual-sort>
+      </default-sorts>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Correlation Between Happiness Index and Suicide Count for United States of America'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Calibri'>Correlation Between Happiness Index and Suicide Count for United States of America (2006-2015)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fr scaling' name='federated.0sz9hvx1qlzn6317lz4wa0cmik5m' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0sz9hvx1qlzn6317lz4wa0cmik5m'>
+            <column caption='Happiness Index(Normalized)' datatype='real' name='[Life Ladder(Normalized)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[Suicide Count(Normalized)]' role='measure' type='quantitative' />
+            <column-instance column='[year]' derivation='None' name='[none:year:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Life Ladder(Normalized)]' derivation='Sum' name='[sum:Life Ladder(Normalized):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Suicide Count(Normalized)]' derivation='Sum' name='[sum:Suicide Count(Normalized):qk]' pivot='key' type='quantitative' />
+            <column caption='Year' datatype='integer' name='[year]' role='dimension' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='title' class='0' field='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]' scope='rows' value='Happiness index(Normalized)' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='col-width' field='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]' value='240' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8790607452392578' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.8790607452392578' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk] + [federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk])</rows>
+        <cols>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</cols>
+        <mark-labels>
+          <mark-label id='30' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2006</value>
+                <value>0.068885390000000005</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='31' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2007</value>
+                <value>2.0388095499999999</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='32' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2008</value>
+                <value>0.65583868000000001</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='33' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2009</value>
+                <value>-0.072573529999999997</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='34' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>-0.039331489999999997</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='35' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>-0.32793538</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='36' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>-0.85725589000000002</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='37' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>0.47068536</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='38' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>-0.11375845</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='39' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>-1.82336425</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='40' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2006</value>
+                <value>1.5339757999999999</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='41' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2007</value>
+                <value>-1.1667116</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='42' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2008</value>
+                <value>-0.7628336</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='43' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2009</value>
+                <value>-0.51780309999999996</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='44' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>-0.1060391</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='45' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>0.21672530000000001</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='46' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>0.52315429999999996</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='47' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>0.67721379999999998</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='48' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>1.1351674</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='49' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]</field>
+                  <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>1.5351023000000001</value>
+                <value>&quot;[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Suicide Count(Normalized):qk]&quot;</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+        <annotations>
+          <annotation class='point' id='2' mark-position='1' pullback='0' text-width='180'>
+            <formatted-text>
+              <run bold='true' fontalignment='1'>When the Happiness index is high, the Suicide Count decreases!</run>
+            </formatted-text>
+            <point>
+              <visual-coordinate class='axis'>
+                <x-coord axis-value='2006.9633867276889'>
+                  <node-reference>
+                    <axis>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</axis>
+                  </node-reference>
+                </x-coord>
+                <y-coord axis-value='2.0220723977836954'>
+                  <node-reference>
+                    <axis>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[sum:Life Ladder(Normalized):qk]</axis>
+                  </node-reference>
+                </y-coord>
+                <page-reference />
+              </visual-coordinate>
+            </point>
+            <body x='254' y='77' />
+          </annotation>
+        </annotations>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' show-side-pane='false' source-height='37'>
+    <window class='worksheet' maximized='true' name='Correlation Between Happiness Index and Suicide Count for United States of America'>
+      <cards>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='2147483647'>
+            <card pane-specification-id='1' param='[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[:Measure Names]</field>
+            <field>[federated.0sz9hvx1qlzn6317lz4wa0cmik5m].[none:year:qk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Correlation Between Happiness Index and Suicide Count for United States of America' width='192'>
+      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
+      RK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

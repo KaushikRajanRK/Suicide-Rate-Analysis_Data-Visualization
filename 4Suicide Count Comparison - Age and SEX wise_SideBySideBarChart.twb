@@ -1,0 +1,645 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Sheet1 (sexagesuicidecount)' inline='true' name='federated.1fsfljx01kpczl1dvq8gw11kqgcx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sexagesuicidecount' name='excel-direct.1bmto3611qjzcd16s8z1i188a2vj'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/dataset/sexagesuicidecount.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='excel-direct.1bmto3611qjzcd16s8z1i188a2vj' name='Sheet1' table='[Sheet1$]' type='table'>
+          <columns gridOrigin='A1:C13:no:A1:C13:0' header='yes' outcome='6'>
+            <column datatype='string' name='sex' ordinal='0' />
+            <column datatype='string' name='age' ordinal='1' />
+            <column datatype='integer' name='total' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>sex</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[sex]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>sex</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RGB_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total]</local-name>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias>total</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Sheet1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C13:no:A1:C13:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+      <column caption='Sex' datatype='string' name='[sex]' role='dimension' type='nominal' />
+      <column caption='Total' datatype='integer' name='[total]' role='measure' type='quantitative' />
+      <column-instance column='[age]' derivation='None' name='[none:age:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.501351' measure-ordering='alphabetic' measure-percentage='0.498649' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:age:nk]' type='palette'>
+            <map to='#2a5783'>
+              <bucket>&quot;55-74 years&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;5-14 years&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;25-34 years&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;35-54 years&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;75+ years&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;15-24 years&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Suicide Count Comparison - Age and SEX wise'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontname='Calibri'>Suicide Count Comparison - Age and SEX wise</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Sheet1 (sexagesuicidecount)' name='federated.1fsfljx01kpczl1dvq8gw11kqgcx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1fsfljx01kpczl1dvq8gw11kqgcx'>
+            <column caption='Age' datatype='string' name='[age]' role='dimension' type='nominal' />
+            <column-instance column='[age]' derivation='None' name='[none:age:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sex]' derivation='None' name='[none:sex:nk]' pivot='key' type='nominal' />
+            <column caption='Sex' datatype='string' name='[sex]' role='dimension' type='nominal' />
+            <column-instance column='[total]' derivation='Sum' name='[sum:total:qk]' pivot='key' type='quantitative' />
+            <column caption='Total' datatype='integer' name='[total]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]' scope='rows' value='Suicide Count' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]' value='110' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='background-color' value='#f3ebf3' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='text-align' value='left' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9890055656433105' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</rows>
+        <cols>([federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk] / [federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk])</cols>
+        <mark-labels>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;75+ years&quot;</value>
+                <value>&quot;female&quot;</value>
+                <value>221984</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;55-74 years&quot;</value>
+                <value>&quot;female&quot;</value>
+                <value>430036</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='14' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;35-54 years&quot;</value>
+                <value>&quot;female&quot;</value>
+                <value>506233</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='15' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;25-34 years&quot;</value>
+                <value>&quot;female&quot;</value>
+                <value>208823</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='16' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;15-24 years&quot;</value>
+                <value>&quot;female&quot;</value>
+                <value>175437</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='17' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;5-14 years&quot;</value>
+                <value>&quot;female&quot;</value>
+                <value>16997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='18' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;75+ years&quot;</value>
+                <value>&quot;male&quot;</value>
+                <value>431134</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='19' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;55-74 years&quot;</value>
+                <value>&quot;male&quot;</value>
+                <value>1228407</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='20' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;35-54 years&quot;</value>
+                <value>&quot;male&quot;</value>
+                <value>1945908</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='21' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;25-34 years&quot;</value>
+                <value>&quot;male&quot;</value>
+                <value>915089</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='22' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;15-24 years&quot;</value>
+                <value>&quot;male&quot;</value>
+                <value>633105</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='23' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:sex:nk]</field>
+                  <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[sum:total:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>&quot;5-14 years&quot;</value>
+                <value>&quot;male&quot;</value>
+                <value>35267</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Suicide Count Comparison - Age and SEX wise'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[:Measure Names]</field>
+            <field>[federated.1fsfljx01kpczl1dvq8gw11kqgcx].[none:age:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Suicide Count Comparison - Age and SEX wise' width='192'>
+      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
+      YII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

@@ -1,0 +1,2343 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20182.18.0627.2230                               -->
+<workbook original-version='18.1' source-build='2018.2.0 (20182.18.0627.2230)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Book9' inline='true' name='federated.1ufrvkh127stb9119rr5q1p51cge' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Book9' name='textscan.0hql10k0gc0ot01gc3msa0pym6hd'>
+            <connection class='textscan' directory='D:/Education/IRELAND/NCI/Moodle Documents/SEM 2/DV/dataset/statista' filename='Book9.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0hql10k0gc0ot01gc3msa0pym6hd' name='Book9.csv' table='[Book9#csv]' type='table'>
+          <columns character-set='windows-1252' header='yes' locale='en_GB' separator=','>
+            <column datatype='integer' name='Years' ordinal='0' />
+            <column datatype='real' name='Percentage saying “fairly easy” or “very easy” to get marijuana' ordinal='1' />
+            <column datatype='real' name='Percentage saying “fairly easy” or “very easy” to get LSD' ordinal='2' />
+            <column datatype='real' name='Percentage saying “fairly easy” or “very easy” to get cocaine' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Book9.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;ibm-5348_P100-1997&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;£&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Years</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Years]</local-name>
+            <parent-name>[Book9.csv]</parent-name>
+            <remote-alias>Years</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percentage saying “fairly easy” or “very easy” to get marijuana</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percentage saying “fairly easy” or “very easy” to get marijuana]</local-name>
+            <parent-name>[Book9.csv]</parent-name>
+            <remote-alias>Percentage saying “fairly easy” or “very easy” to get marijuana</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percentage saying “fairly easy” or “very easy” to get LSD</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percentage saying “fairly easy” or “very easy” to get LSD]</local-name>
+            <parent-name>[Book9.csv]</parent-name>
+            <remote-alias>Percentage saying “fairly easy” or “very easy” to get LSD</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Percentage saying “fairly easy” or “very easy” to get cocaine</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Percentage saying “fairly easy” or “very easy” to get cocaine]</local-name>
+            <parent-name>[Book9.csv]</parent-name>
+            <remote-alias>Percentage saying “fairly easy” or “very easy” to get cocaine</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Availaility of LSD' datatype='real' name='[Percentage saying “fairly easy” or “very easy” to get LSD]' role='measure' type='quantitative' />
+      <column caption='Availaility of cocaine' datatype='real' name='[Percentage saying “fairly easy” or “very easy” to get cocaine]' role='measure' type='quantitative' />
+      <column caption='Availaility of marijuana' datatype='real' name='[Percentage saying “fairly easy” or “very easy” to get marijuana]' role='measure' type='quantitative' />
+      <column aggregation='Sum' datatype='integer' name='[Years]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.413514' measure-ordering='alphabetic' measure-percentage='0.586486' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Reino Unido&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Availaility of Drugs in US ( 1975 - 2018 )'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Availaility of Drugs in US ( 1975 - 2018 )</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Book9' name='federated.1ufrvkh127stb9119rr5q1p51cge' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1ufrvkh127stb9119rr5q1p51cge'>
+            <column caption='Availaility of LSD' datatype='real' name='[Percentage saying “fairly easy” or “very easy” to get LSD]' role='measure' type='quantitative' />
+            <column caption='Availaility of cocaine' datatype='real' name='[Percentage saying “fairly easy” or “very easy” to get cocaine]' role='measure' type='quantitative' />
+            <column caption='Availaility of marijuana' datatype='real' name='[Percentage saying “fairly easy” or “very easy” to get marijuana]' role='measure' type='quantitative' />
+            <column aggregation='Sum' datatype='integer' name='[Years]' role='dimension' type='ordinal' />
+            <column-instance column='[Years]' derivation='None' name='[none:Years:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Percentage saying “fairly easy” or “very easy” to get LSD]' derivation='Sum' name='[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Percentage saying “fairly easy” or “very easy” to get cocaine]' derivation='Sum' name='[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Percentage saying “fairly easy” or “very easy” to get marijuana]' derivation='Sum' name='[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]' value='56' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height-header' value='10' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#e6e6e6' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Area' />
+          </pane>
+        </panes>
+        <rows>([federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk] + ([federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk] + [federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]))</rows>
+        <cols>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</cols>
+        <mark-labels>
+          <mark-label id='0' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1975</value>
+                <value>46.200000000000003</value>
+                <value>37.0</value>
+                <value>87.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='1' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1980</value>
+                <value>35.299999999999997</value>
+                <value>47.899999999999999</value>
+                <value>89.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='2' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1985</value>
+                <value>30.5</value>
+                <value>48.899999999999999</value>
+                <value>85.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='3' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1990</value>
+                <value>40.700000000000003</value>
+                <value>54.5</value>
+                <value>84.400000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='4' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1995</value>
+                <value>53.799999999999997</value>
+                <value>47.700000000000003</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='5' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2000</value>
+                <value>46.899999999999999</value>
+                <value>47.799999999999997</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='6' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2001</value>
+                <value>44.700000000000003</value>
+                <value>46.200000000000003</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='7' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2002</value>
+                <value>39.600000000000001</value>
+                <value>44.600000000000001</value>
+                <value>87.200000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='8' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2003</value>
+                <value>33.600000000000001</value>
+                <value>43.299999999999997</value>
+                <value>87.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='9' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2004</value>
+                <value>33.100000000000001</value>
+                <value>47.799999999999997</value>
+                <value>85.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='10' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2005</value>
+                <value>28.600000000000001</value>
+                <value>44.700000000000003</value>
+                <value>85.599999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='11' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2006</value>
+                <value>29.0</value>
+                <value>46.5</value>
+                <value>84.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='12' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2007</value>
+                <value>28.699999999999999</value>
+                <value>47.100000000000001</value>
+                <value>83.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='13' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2008</value>
+                <value>28.5</value>
+                <value>42.399999999999999</value>
+                <value>83.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='14' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2009</value>
+                <value>26.300000000000001</value>
+                <value>39.399999999999999</value>
+                <value>81.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='15' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>25.100000000000001</value>
+                <value>35.5</value>
+                <value>82.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='16' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>25.100000000000001</value>
+                <value>30.5</value>
+                <value>82.200000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='17' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>27.600000000000001</value>
+                <value>29.800000000000001</value>
+                <value>81.599999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='18' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>24.5</value>
+                <value>30.5</value>
+                <value>81.400000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='19' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>25.899999999999999</value>
+                <value>29.199999999999999</value>
+                <value>81.299999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='20' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>26.5</value>
+                <value>29.100000000000001</value>
+                <value>79.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='21' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2016</value>
+                <value>28.0</value>
+                <value>28.600000000000001</value>
+                <value>81.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='22' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2017</value>
+                <value>26.300000000000001</value>
+                <value>27.300000000000001</value>
+                <value>79.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='23' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>28.0</value>
+                <value>28.100000000000001</value>
+                <value>79.700000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='24' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1975</value>
+                <value>46.200000000000003</value>
+                <value>37.0</value>
+                <value>87.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='25' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1980</value>
+                <value>35.299999999999997</value>
+                <value>47.899999999999999</value>
+                <value>89.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='26' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1985</value>
+                <value>30.5</value>
+                <value>48.899999999999999</value>
+                <value>85.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='27' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1990</value>
+                <value>40.700000000000003</value>
+                <value>54.5</value>
+                <value>84.400000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='28' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1995</value>
+                <value>53.799999999999997</value>
+                <value>47.700000000000003</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='29' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2000</value>
+                <value>46.899999999999999</value>
+                <value>47.799999999999997</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='30' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2001</value>
+                <value>44.700000000000003</value>
+                <value>46.200000000000003</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='31' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2002</value>
+                <value>39.600000000000001</value>
+                <value>44.600000000000001</value>
+                <value>87.200000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='32' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2003</value>
+                <value>33.600000000000001</value>
+                <value>43.299999999999997</value>
+                <value>87.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='33' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2004</value>
+                <value>33.100000000000001</value>
+                <value>47.799999999999997</value>
+                <value>85.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='34' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2005</value>
+                <value>28.600000000000001</value>
+                <value>44.700000000000003</value>
+                <value>85.599999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='35' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2006</value>
+                <value>29.0</value>
+                <value>46.5</value>
+                <value>84.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='36' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2007</value>
+                <value>28.699999999999999</value>
+                <value>47.100000000000001</value>
+                <value>83.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='37' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2008</value>
+                <value>28.5</value>
+                <value>42.399999999999999</value>
+                <value>83.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='38' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2009</value>
+                <value>26.300000000000001</value>
+                <value>39.399999999999999</value>
+                <value>81.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='39' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>25.100000000000001</value>
+                <value>35.5</value>
+                <value>82.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='40' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>25.100000000000001</value>
+                <value>30.5</value>
+                <value>82.200000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='41' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>27.600000000000001</value>
+                <value>29.800000000000001</value>
+                <value>81.599999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='42' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>24.5</value>
+                <value>30.5</value>
+                <value>81.400000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='43' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>25.899999999999999</value>
+                <value>29.199999999999999</value>
+                <value>81.299999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='44' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>26.5</value>
+                <value>29.100000000000001</value>
+                <value>79.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='45' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2016</value>
+                <value>28.0</value>
+                <value>28.600000000000001</value>
+                <value>81.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='46' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2017</value>
+                <value>26.300000000000001</value>
+                <value>27.300000000000001</value>
+                <value>79.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='47' label-state='off'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>28.0</value>
+                <value>28.100000000000001</value>
+                <value>79.700000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='48' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1975</value>
+                <value>46.200000000000003</value>
+                <value>37.0</value>
+                <value>87.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='49' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1980</value>
+                <value>35.299999999999997</value>
+                <value>47.899999999999999</value>
+                <value>89.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='50' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1985</value>
+                <value>30.5</value>
+                <value>48.899999999999999</value>
+                <value>85.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='51' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1990</value>
+                <value>40.700000000000003</value>
+                <value>54.5</value>
+                <value>84.400000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='52' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>1995</value>
+                <value>53.799999999999997</value>
+                <value>47.700000000000003</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='53' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2000</value>
+                <value>46.899999999999999</value>
+                <value>47.799999999999997</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='54' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2001</value>
+                <value>44.700000000000003</value>
+                <value>46.200000000000003</value>
+                <value>88.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='55' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2002</value>
+                <value>39.600000000000001</value>
+                <value>44.600000000000001</value>
+                <value>87.200000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='56' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2003</value>
+                <value>33.600000000000001</value>
+                <value>43.299999999999997</value>
+                <value>87.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='57' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2004</value>
+                <value>33.100000000000001</value>
+                <value>47.799999999999997</value>
+                <value>85.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='58' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2005</value>
+                <value>28.600000000000001</value>
+                <value>44.700000000000003</value>
+                <value>85.599999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='59' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2006</value>
+                <value>29.0</value>
+                <value>46.5</value>
+                <value>84.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='60' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2007</value>
+                <value>28.699999999999999</value>
+                <value>47.100000000000001</value>
+                <value>83.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='61' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2008</value>
+                <value>28.5</value>
+                <value>42.399999999999999</value>
+                <value>83.900000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='62' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2009</value>
+                <value>26.300000000000001</value>
+                <value>39.399999999999999</value>
+                <value>81.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='63' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2010</value>
+                <value>25.100000000000001</value>
+                <value>35.5</value>
+                <value>82.099999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='64' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2011</value>
+                <value>25.100000000000001</value>
+                <value>30.5</value>
+                <value>82.200000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='65' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2012</value>
+                <value>27.600000000000001</value>
+                <value>29.800000000000001</value>
+                <value>81.599999999999994</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='66' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2013</value>
+                <value>24.5</value>
+                <value>30.5</value>
+                <value>81.400000000000006</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='67' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2014</value>
+                <value>25.899999999999999</value>
+                <value>29.199999999999999</value>
+                <value>81.299999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='68' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2015</value>
+                <value>26.5</value>
+                <value>29.100000000000001</value>
+                <value>79.5</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='69' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2016</value>
+                <value>28.0</value>
+                <value>28.600000000000001</value>
+                <value>81.0</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='70' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2017</value>
+                <value>26.300000000000001</value>
+                <value>27.300000000000001</value>
+                <value>79.799999999999997</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+          <mark-label id='71' label-state='on'>
+            <tuple-reference>
+              <tuple-descriptor>
+                <pane-descriptor>
+                  <x-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  </x-fields>
+                  <y-fields>
+                    <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  </y-fields>
+                </pane-descriptor>
+                <columns>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get LSD:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get cocaine:qk]</field>
+                  <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[sum:Percentage saying “fairly easy” or “very easy” to get marijuana:qk]</field>
+                </columns>
+              </tuple-descriptor>
+              <tuple>
+                <value>2018</value>
+                <value>28.0</value>
+                <value>28.100000000000001</value>
+                <value>79.700000000000003</value>
+              </tuple>
+            </tuple-reference>
+          </mark-label>
+        </mark-labels>
+      </table>
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.25' source-height='37'>
+    <window class='worksheet' maximized='true' name='Availaility of Drugs in US ( 1975 - 2018 )'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[:Measure Names]</field>
+            <field>[federated.1ufrvkh127stb9119rr5q1p51cge].[none:Years:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Availaility of Drugs in US ( 1975 - 2018 )' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAgAElEQVR4nO29V3NcSZag+V0ZWgEIaIBQ1DIFs0R2id6qHrPtbtvZtn3ol/5h87wvs2Zt
+      NbYzNdU7XSKzujKZopKZ1ITWKgIILa/2fQgQmUxEUAAgSDDvZ0YjEIF73f1eP+7Hjx8/RxJC
+      CHx8fqCoANlsFl8OfH6IqABCCF8AfH5wzN79EkkIITKZjC8APj84hGu2ZgAA0zRfZ118fF4L
+      +wKg6/qRbyaEwLbtY7mXj89JsC8AkiQd202P816ngUePHlGtVpmcnGRmZoZr164Rj8d59OgR
+      QgiGh4eZmZnh/fffR9O0111dn+8gv+4KvA3Mz88TjUaJxWL09PTweHaR6bUCa+sbbG9v8/Dh
+      QyYnJ5mfn3/dVfX5Hr4AHBEhBP/wD/9APp/HNE0KlQa3Hm3yxXSGTx5us7hdwXFdVFX1DQ1v
+      IL4AHAOPHj0iGAyyurXLR1/NE453YzZrRONJcg2Jx4UA//pvnzA5OfW6q+rzPQ5lBrUaJeZX
+      dhgcHqK8u4mnhhk/MwxCYFkWgUCg47WPHz9maGiIjY0NFEXhwoUL7O7uMj09zbVr15iZmWFo
+      aIiRkZHjaN+JUaga/H+31/A8cWANJITAEwJdVbg+0c354SSK7I89bwLq8//kII5to6gSplVB
+      VpPoGLiShC7LKIqCoihtryuXyywtLaGqKvfu3eOdd95BURSSySSTk5Pcu3ePkZERNjY2GBsb
+      O0q7TpRsqcEfvtkAJGT5oAFAkiRkwBNwe36XBysFbkymOT+URFF8QXidHEoAJDVIX7qbXKEE
+      jospS8hC4Hoeruvium7b66anp2k0GqysrDAyMkIul8OyLLa2tiiVSly4cIFSqfTMe7xpbOZq
+      fHRv84UtX7IkYTseX0xvc29pl2tj3ZwdTLy0IAgh+O1vf8uNGzewbZvZ2Vn+/u//nuXlZaan
+      p+nt7WV7e5uenh5+8pOfHKZpPwgOJQDBUJhGs8j42Bi2UUcoOjLwPCXq5s2bnD9/HoDV1VV0
+      XadQKNBoNKhUKgwODlKpVBgfHz9MtU4UIQSb+Tp/vv/inf+7KLKMZXt8MZPl/nKeGxM9TA4m
+      UNrMIO1YWFggmUxSqVTI5/Pouo4QgrGxMTKZDD09PfT397OxsfHSdfshcbgZQFbo7ulp3SAS
+      e6lr4/E4AFevXt3/LJ1Ot/35TWY5U+XW9DYSR9vzUBUZy/H4fDrD/eU81ya6OdMbI6C1VyOf
+      EA6HqdfrOI6zv+ewu7tLOBxG13X6+vr4/e9/TyKROFL93naO1RdIPGcRXKgadMWCRy7ndSKE
+      YGGrzK3HGRRZOtZNv9ZiGRzXI6grJMI68bBOKhogGQ2QigYIB1XkvTKfvDNJkg68P0mS8DwP
+      STreOr5tHGoGOCz/6/YaU4MJ3j/b23ax+KYjhGB+q8wX01nUV7B4lSQJRQJFVhACSnWLYs1k
+      JVvFEwIhQFNlYiGNeFgnGdFbghELEAloaOrTdZJ9S9NzOVEBkCWJmfUSharJL68NEtRPtPgj
+      IYTgwUqBO4u7x2rCLOV3qBRzhCIxKqU84+euYtsmy7MP6Er3YzabWGaTiYs39kfyatOm2rRZ
+      z9XwvJYru6bKRIIao+kYU4MJ4mHtpUb+UqnEo0ePuHbtGktLS/T29jIwMIBpmty7d48rV64w
+      NzfH8PAwPXvq79vAiQ8RsiyxW27y2y9XyFeMU7E7KoTg3nL+2Du/6zrsbq9jWyar849wbAvP
+      cynmsqT7R9jZWsO2TEKRGGazceB6WZJQFRlNVQCJuuHwaLXA//v5Er/7apXZjRK2477QMw4E
+      AgwPD3Pr1i1UVeXhw4cIIfjiiy9oNBrs7OwQCAR4/PjxsbX/TaDt28xvrfCnjz7iz59+ju0e
+      fweVJAnT9vjdV6ssbleO/f7HiRCC2wu73F/KH/vmVaNWxbYMMhvLhKNxEqk09WqZnv5hqpUC
+      ALZtYjTqyB32Vr6PLEsoskypZvHFdIb/+h8LfHx/i618/ZmCoKoq2WyWdDpNsVikUGiVb5om
+      N27c4M6dO0QikbfOma/tIvibb25z4533qOc2yBgBzo70vtDNnrcI/n/+PI/jPf0SHNfjwnCS
+      m+f7XtgEeFIIIfjscYaF7fIr27kVQtCsV5FlmfzOFt19QwghyK4vMzxxnka9imUYdPcNHnox
+      K4TA8QRBTWFyIM65oSTJ6NPvaH19naWlJcbHx1lfX2dwcJBoNIokSdy/f5/r16/z6NEjhoeH
+      mZiYOI6mvxG0FYCvP/uYrXyVQr7Ar/7x/2K453umTiFYnruHkhjHKKzjqSHOn5t8ritEOwEA
+      8DxBTyLI314bIhR4M9YFttsyTS5nqm+cYB4FIQSOK+iOBzg7lGSsN/bGPPPXQduWq5EU13u6
+      mVuLYFnWge/L+QxoIUyzQjDSh0bzhVwhJFlCajMLK4pEoWry2y9X+fW7I6QToaO16oiU6yZ/
+      urNOpWm/EmvP60SSJHQZqk2Hr+Z2uD23y3A6yvnhFEPdkVNpnTsKbQUgpApmNsrcvHaBpnLw
+      dJceihJs1CjaMp6Roa6G6H8BVwjhPfvwvWk7/O7LZT4438e5ocSJ26+FECxsV/hyphUlQ5Kk
+      b9uyV29ZUfBcF9d1kBUVaP2dLL+Yjv4m8WQ/YTNXYzVbIRbWuTCc5NxQ8oBJ9W3lmRthVr1I
+      tuoy0v9iZq/DrAHa4bgeZ4cS/PhC34l5TTqux2ePMyxlKvujvhCCx998RiSWoFpuLQqvvP8z
+      quUC22uLrSOgloGiqFx698MTqeerxvUEqiwxNZjg6ng34WNSj2q1Gl9//TUjIyMUCgUcx+FH
+      P/oRruvy+eef8+GHH3L37l2CwSCXLl06ljJfhLate/TN5yxv5fEci8sf/OLEKvMEVZFZ3KpQ
+      qJr8b9eHiARfreUhXzH4+P4mDcN5SuXJbq5gmQauY5PoarloeK5LPNlNIdtasNaqJZr16iut
+      30miyBICmNss8XityGhvlKtj3aQTwSPNyJFIhO7ubnZ3dzlz5gx37txBCIFpmriuS71eR5Zl
+      SqXS8TXmBWgrAGevvMfZK8dzUP6wyLJEqWbyP75Y4Vc3huhNho+9DE8IZjdKfDW7gyRxQP/t
+      7hsiGIpQLuzSqLXMtc16lVA0hqQoROIJ1han0d7CIACSJKGpElv5Ouu7NZKRANfGuznTFz3U
+      rGxZFr29vdy7d2+/XzmOQyQSQdd1JEnCtm0cxznupjyTtirQ7c//wvJmhjOjY5y9eI3UC/rv
+      HJcK9P17CgGTA3HODiXojoeOxSpj2S63HmdY26n6PvkvgBAC1xMEdZULw0nODydfynpUq9W4
+      e/cu4+Pj7OzsIEkSQ0NDANy7d4+xsTFs2yYYDJ6oN3BbARDCY3l+moYX4OK5yRfucK9CAL57
+      b8cVhIMqo+ko54aSdMUCLz0tCyEo1kw+urdJw3T2F4I+L4639w7H++NcG+8iFtaf8ol9k5zv
+      XNfF8zxUVcW2bTRNe8q40VaEJUlmK7vLYDrJ8maeqZFX4/vheS6by3P09A9Tr1VoVMuMTl3C
+      cWy2VubpGx7DaNSRJJl4qhtNbR0mWdgqM71WJBkNMN4fY3IgQTz8fDVECMH0epHb87tI4Hf+
+      Q/JEVVzJVpjfKhEOaKiKtOea0dqJVhQJVZaQZRl172dVkVFkCUWRUfc+H+yOvNC7OywPHjxg
+      YWGBoaEh6vU6Z86cYWJign//939HkqTOznCpWIS1bI33fvTq/MldxyWVHmB59gGW2WR06jIA
+      nuOQSg+wNH0PRdUQwiOaSO17N0qShK4pNEyHhysF7izmSEUDTA4kmOiPEw0dXDQblsutx9ts
+      5Gr+edxjQpIkdFXBcT2cZxzg62T6FrSsb8lIgDN9MSb646Sinc+TH4aenh4ajQaRSATTNNne
+      3mZ0dJSBgYHWzNDpwngqzbkrI3uOVk/jeS6VSpVoLI5rGQhZIxh4eUuNputsrsyhB4KMn7/G
+      4vQdEl09aIEg60szaHoAPRDE87yOD/HJS6g1be4u5vhmYZf+VJjx/jhneqMEdZVsscF/PNjC
+      sF2/8x8BIQTri9OoeoBQOEJhZ5szZ6+gahrZzRUkJILhCKX8DiOTF/dVoU4qkQToamsge7RS
+      4N5SjnhIZ6z/W2E4ijolhODTTz9lZGSE7u5ustksV69e3T9FJ0lS532AjeVZ/uPTLxgYu8Qv
+      /uYmynfqYRkNytUqpWoDYVkgK0ydm0J6yTVAs15lfWmGYCiC67qYRoORiQs4tkV2c5VILIFp
+      NJAkibFzV1/qYbieQAK64kHyFQNZerN009OIEIJ6tcTq/CMmL73DzuYqkXiSaCzJvS8/5szU
+      ZSqlPNFEimg8SSzRdahyPK+14E5EdEbTUSYG4iSjgVeisnacATLZXX79v/9nIoqN5cB3tQpN
+      D1CvrKMHA0hKChUD7xCuEOFonPPXPmj7t8nuF3PA64S6J7HluvXWuTO8Thzbbg0kYm+B6bp4
+      nktP/xDl4i6qqqFpOmLvNNphUBQJRYGm5TKzUeLhapFEROdMX5zJgRefGVpj+neMO9/9Ye/y
+      tgJQzmfZzO7iuffoOnOZqdTT3zfrVVxUdCmEYxexlDDKMbhC+LzZCM8jl9kgHE1Qyu9gWwbh
+      aBwhBLKiEg1F0YMhSvkdJi/eOLZ3rSoSdcPm0UqOu4s7RAIaA11hFFnC3ZstXK8Ve6n1s4fr
+      in3TrStafc/xvH0LliRJLa2gnQqU3d5gZmaGWCrNuQuXiL7gTuyrNIO+CGazwepCKyCtY1u4
+      rsPVm7+gsLvN1uoCw2Pn2FiZQ5ZlLr37oa8SnWK+21+P8h7bm0EVjeGhQZqWh+d5h775SRMI
+      hZFkGUlAJJ5ElmRc1yEYCqMHguxm1ulKD2AaB09X+ZwujmvwaisAuxtLLG/lAegZHCcePl7T
+      1KuiXisj9ixGjVoF13Ho6h3AdRwQoAWCFHOZjmsUnzeTfHaTne01wpE41XKBUDjK5KV32Fpb
+      pF4p0jt4hvWlGVI9/QyNnX2pe7cVAD2aIhEqUW6ejuhsT4hEE5y7erPtd0+c2XxOH6l0P/md
+      LcLROIWdLXS95ZqT3VgmEAyzvbbE1OX32Fp9+fDzbc0jZ89dIBIKgCQhfDXZ5zUzfedzJEnG
+      aNYJRWI4jk2tUiKW6EJWFPRgkKXpO4cKA/MMbyYXRZKo15uQihyh+j4+R+PCjR/juS6KquG5
+      7l6AAMHkpXdwHQdFVXFdB0V5+bMLba9YnLlPxdIQwiQePX43ZB+fl0FR1P3O/f1RXt2LUqGq
+      hzsz0nbOELKGKjmomk67kLeea7O+tkqtaVLMZcmX3p4DIT4/LNrOAANDo0QjEUrVBiH9oGS5
+      jkO6t5eNzXVkdGTqJJMxP92Mz6mjbZ+NRCLc/eJPPJ6dI1usHfheQrC+vsWZsWEUVW85zEnS
+      vhuELMtt//kbTz5vGh0H7Uvv/YzueIRE5OBpsEa1gpCgXLHQpCaeFmwlyNhzg/A8r+0/3w3C
+      502j47K5lNvBsh3cNp023tNP/MkZmVR8/3O/e/ucNjrOAKZlEk+liYXevgPfPj5PaCsAlcIO
+      DdNjY22ZhmmfdJ18fE6MtgLw+MFdXEkjmuqmO/56wxT6+LxK2q4BfvyL/4Tr2KyvLFKsGr4Q
+      +Ly1dFwEK6rG2NSFk6yLj8+J4+9d+fygOZQAOGaDb+49AARL8zPML635JlCfU8mhQv+qgTDJ
+      eAQwUPVuQkfMD+Dj87o4lADYZpNyqUy5mqbZyNNUVPr8Q/E+p5BDCYCsqExNTaFqOhMTYwhZ
+      RcbfCfY5fRxKABRVIxZ7u7IF+vww8a1APj9ofAHw+UHjC4DPD5ojCoBgfuYRs/NL/gLY51Ry
+      xBSATQKhXjSaOEe/mY/PiXPEGSBIo5qh2DT9zu9zKjliv5W5cOXq/m++GuRz2tgXANM0j2WX
+      1nGcjvd5ZzyJ7Z6eYLs+bz/PzBT/sjwvPLqPz5vGG6W6b21t8fDhQ5LJJKVSGSE8fv13f8f2
+      1jb37t9nanKC1dVVgsEgsViM7e1tfv7znxONRl9LfSuVCrdu3SIWi+E4DvV6nV/96lfYts1H
+      H33E9evXWV1dxbIsRkZGWFlZ4fr16wwMDByp3E8++YRqtcrIyAiZTIb+/n6uXr3KRx99RDgc
+      Jp1OMz8/z7lz55idnSWRSPDTn/70SGVubm7y6NEjUqkUjuOwsrLCP//zP1OpVPjDH/7AP/3T
+      P/HRRx8RCoWIRCJkMhl+8YtfEIkcPqymEII//vGP+8+vUChw48YNEokEt27dIhqNoigKGxsb
+      XLlyhQcPHjA0NMT169cpl8t89tlnxONx3nnnHX7zm9/wL//yL2QyGR48eEBvby+lUulkBaBU
+      M6k2LSzHw7I9LMfFdj1sx8NxPbYzGVbnt3DVEo1alVqlTE47w8r8Y0YnL/Kvv/+KM2dGENUG
+      8brD9avvsLW9zbmzLxcS+7iQJIlGo4Gu65iWRa5YZW6zzHauwsONGjlrFsOwCIbD3PvLXa68
+      8yP++5/vMnXhaFG3705v4poN1qoqzVKW+V2HrJPi/moVyc4SCmd574Of8LuP/sCFi5fZLubZ
+      yNUIaAoBTUFVZHRVfunUUY1Gg3g8zrvvvrsf/ymZTDI4OEilUmF0dJRSqYRlWdy8eZNMJsPk
+      5OSR2tpsNrEsi1AohOM4VCoVAoEAq6urdHd37wv3n//8Z372s58xNzcHPP1u7ty5w5kzZ/bb
+      IMsyKysrDAwMnKwA/O6vq9iuhyxJtIuRtbW2jSlFsBoG8a4BHCFTr9UIhCLMP7qDHgjzaGah
+      lXtWD/HpvWXGz17mXkYiEQ4Qj2gkwgG6YgFiYZ2Qrhx7MC4hBHXDIV81mFlYYasieLC2TqVh
+      gQQVfQ5V1RBKiJWNXRzHbqV5jSf57LPPSHb3kSkeLUFHrlRHUVQKy6tEEylKuRLqegbLkykU
+      akQdlf/5v/5EIBjhj5/eRtV0qvoGnieeMlTIEmiqgqa0hOG7YTe/+9SEgI2VOTxHYmZ7ha8W
+      CvQNnWHlowe4nsf9L2+zWpbZ2VxBVVVCoRBzqxnOXbqO2CrvC56uymiqjCLLaKr03Iydrusi
+      SRKapiGEIBwOUyqViMViJBKJ/VhTX331FRMTE3z99df7M06lUiGVSmGaJtFolPv37zM1NUV3
+      dzeFQoFkMkkulzvZNcDzUiQJIbCMJloggGPb3wZEVRQs00APBHEdG0mSkWQZx7bQ9G8Tpgkh
+      EAK8vbZoikwsrBHSVdS9l6wqEpoqo++9eE2VWx1g739dayVxVvaSQdcMm3zFIFcxKNVMyvXW
+      DCbLrVHGMY1WLmMEnuu2grRKErZloOmB/YQdiqrtt0GSJDzXpZTfIdndS61SQg8ECYYjWKZB
+      ubBDoqsXo1EnFInieR62ZRCNt5K1uY6D69poenDveQX3ymmVpWr6flmObSEryqEiJ3d6N0KA
+      oiitxCOAbbWeAZKELMlIsoRj26haqx8IBJ7X+l+iNfhJEiiytJf5UWo9TyQEYm+AbP2daZhI
+      Eui6TrPZJBwOw147ZUmg6zqObRGLRjANg3AoiKapyBJYpkEoGCCga0h4KHKrD9iWSSwaQcI7
+      WQH4L//tFhsri/T0D1PK72CZBhff+Qn57Ca5zAaDY2fZWl0g2ZXGdR0atQpTl9871lH8STsF
+      e1kEv/f7d18AQuCJVmb0406zujL3EFXVaNSrOLaF8Dwuvfchy7P3UVWNZE8f2Y0VhGhF1ZMk
+      ifHz19ADByP1vShCCLZWF/YFo1ouMDx+nlAkxubKHMFQBD0YolLMMTA6ydr8Y4bGzx2pzNfJ
+      d9814omZfq+f7/1+qI0wz7VZX12laTmU8jsUygfjh7ajWa/iug6WaTB2/iqhSBRJkqjXynie
+      S2Z9md6BURq1KmazSTzVQ71afrE6eR6WabSE0DRw7FY8I9d1MI0mQnjYlrlXfxfhuiiyhKLI
+      KHuzw5OZQVXk/e9aU7Z07KqUpgcoFXbQA0Es0+CJTtg/PI4AVucfkR4YQdV09ECQVE8/ltE8
+      UplCCEr5HXa31+gfmSAQiqBqGkJ4pNID5DIbZNeXkSSJuQe3SQ+OsrE0e+S2NutVVuYe4LoO
+      i4/vkMtsAFCrFFlbnMZzXdYWp7FMg/zOFoXd4xmQpb2BTJYkZFlqvVO5pYI9eecdBcA2DUql
+      ErZzcMFWymwQSHSxvrZMvtSknMvyIsu6erXMyORF6tUS64vTjEy0ok40a1WGx89jmQb1ahnb
+      NrFtk2a9uh///XksPr7D8uwD1henmb7zOdVyfv/z7MYy+ewWC4++YWXuAdN3P2f67uf7OuTa
+      4jSL03cRQrAy9xBzr6M5js3i9F3KhV1m7/8VyzSYe3ibwm7mher0LFRVQ9MDqJqGHgigB4LU
+      ykXq1TKNapmhM2fZXJlD14PIskJ+Z5NwLHGkMj3XQXguILWyaDo2eiCEJMlsLM0wOnUJWVXR
+      AyEc2yIYCj+9GDgkK/MPCUcTLM/cp5TfIZpoqXJrC49BCBYe3yEaT7Ey94DiboZ8duPETg52
+      VAz/+Nv/Sl1OcuNHv2Bq6HsZv9UA5fwOgYAGXqB1E2lPup5xJnj8/DWW5x8zfv4altnSkavl
+      AhMXrrO1tsCld3/CztYaZwYv4zotFSgUfjETp6KqNEoFutL9mEaTnc1VutIDdKX72VpdpFGr
+      MHnpBmsL0yRSrcCmQnjIskqtXMR1bKrlAsVchvTACIFgiNX5R7iOTX5ni5GJC8w/uM3I5AVy
+      2U26e49myuwfGad/ZPzA5/FUN72DowB09w0eqYzvo2o6wXBkf+0wdGYK13GoVVrtL+ayxJNd
+      lIu7nL/2AQuPvmFk6uKRZ79gMEwxl6ErPcDExevM3vuSS+9+iKYHqVVKSLJEJBYnn5XQgyGE
+      5yJxvCpnJzoKwPUf/ZK5uUXibaJDh8JhpGqTUDiJXS/iKuFWdOjnnAlWFJWxcy3XCVXTEULs
+      L+yefN4//G2niMQSLzwSSEgEQmGMZh3heah6gEoxj2WaSLJMV+8Acw9uk+rpp1pqzQ6yrOC5
+      Lkig6gGyG8uYRpNiLoMeCFKvlijuZugfmcA0miiqimUauM/Y7X7Tmbr83oHPEl3pp5IIpgda
+      Anjhxo8BjtzWUCSOZe0iKwoLD78hlR6gUswTisRwXYehsXMszdxnYGSCUn4HqWVhOJFn3HER
+      /Off/xaLADc++JDe5IttZrzuRNmHQQhBdnMF2zIZHj+/r3ZZpkk0nqRSzKHpAbKbK4xMXGRj
+      eZae/iEiseTrrrrPMdBxBqjXG2iRt9+lQZKkp2adcLQV7l0PtMJBxvfUpScz1Jmzl0+4hj6v
+      ko6L4MuXrxAKhZ67WeHjc5rp2Ls31+aRVY1K7WimNx+fN5mOAqCHkyzMPEIP+AkyfN5eOq4B
+      RsenSCQSmIYBvB5vSx+fV037PMFCkNlcY6fYpKfraJsvPj5vMm0FYG52GttxcV2bL/7yMQ0/
+      S5LPW0pbAZBlmWa9RrVa5er7Pyb0Rh2b8fE5Ptp27bPnLtA0TP7m6rW229HCc9na3CDW1YtV
+      K+KpYXq7/Y0hn9NHRytQYWuF3/7P35Ep1A98V8xsUGzYCGFRrXs0y0VcvvW+6/Sv7SkYH5/X
+      SEcBcO06hmHQtJwD3zm2w8DwCLmdDJIsI+8dHnmeAPjd3+dNo6MAjJ27QiISQmvj2NkzPEIl
+      s05XzzBBzUEJRVFo+eQ/699pdSDzeXvpuLzd2twiEI4Q1A/648uKzvjkVOuX+OFP/fv4vG46
+      zgCmaZ6IP7aPz+ukowBogSDpdBpd822gPm8vHXv3xYuXMR2BpvizgM/bS1sB2N3dQVI1Rgb6
+      Tro+Pj4nSlsBKO1uc/fRLMPDI5y/coOuWOik6+XjcyK0XQOcvXSdgZ4E1UoF2/GjOfu8vXRc
+      A3T1DjIVj+B5R4tj6ePzJtNRAC5cvIzsH4f0ecvpKAB3v7qFic7o2FmG+roOfF/c3YJgF2Zl
+      B08NM9jX80or6uPzKug4xDu2jW27ZFbnqH3vPIBrNSmWilRqVQxbxW3WcGm5UT/rn7+x5vOm
+      0XYGaNYrNF2Z4d4oUmKI6Pe8IYq5HJZt0yyVSQaCeE/CjgqBEALPa79w9j2BfN402gqAY1sE
+      AkFEIM5oX+rA9z2DI3T1pqlbMmY1h6emUPhWADriO8P5vGG0FYDMTg67XmTmcY5oMk1/10GH
+      N1kNElMhFj7e+JU+PidJ2zWAVStSbvrmT5+3n7YCoEdTJELtIzz7+LxNtN8JPneB7q4Uuq4j
+      yb7lxuftpaMZtFYtoOk6tbofGtHn7aWtAGyszOPpKWrlEvFo+KTr5ONzYrS1AkXjKUa0MCMj
+      o0SDL5aiyMfnNNJ2BtjN5Zh7+DW3bt2iUPVVIJ+3l46LYLtRQlJUTPtgWBQfn7eFjs5w567e
+      ZGFpjZB+8E+sZo31rSyxZDd2rYCrhhkZ6n+lFfXxeRV0FIBiPoceDBNoExZFDYQZSHeRq1YQ
+      hFEdE0+S0J6TJVKSJSTfG8LnDaKjALieC5K6l8r+aax6iZ2qzdjQAIuLW3g48AJZIoX3HF8h
+      H58TpqM3qKqHqeQyWG0SZQtkXLNOrhiiJxXGVUItZ7hXXVsfn2OmrQB8detjasSId6VJJw4e
+      iA/Fkkz6aUJ93gLaCsDP/9N/pl4tsTA/T77SpCfhb4b5vJ10XANEYkmuv3vzJOvi43Pi+Kfe
+      fX7Q+ALg84PGFwCfHzRHFADB5toya5tZ3wTqcyo5ogCYOCKE4hj4Byh9TiNHDP6v4DgmHo6f
+      /8vnVHJEAdDoTobw1LC/E+xzKtkXANM0D+WnE4zEATAMAwDHcTreJx3XsPxo0z5vEJIQQmQy
+      mWNxUhNCYFkWgUDgGKrm4/Pq8c2ge6yurvKXv/yFSqXC9vY2s7OzAMzPz/PJJ59QqVT4+OOP
+      2draes019TlO/Ax4e2xvbyOEQJIkpqdnKBmCnBtnd3mFrliAlZUVrl27xtzcHN0KV7IAABT4
+      SURBVIODfjS8twVfAPa4dOkSlXqT//J//4aqKcjn8/w4METVTlEsGgSyS6RSqY5nHXxOJ2/k
+      GmB9fZ3bt29z6dIlHjx4wM2bN+nu7ubTTz8lEAgQDofZ2dnh17/+NaHQ0fKXOa7HVr7Orbvz
+      LCwsMjx5CUVRqFfLIASOY1PK7zBw5hy7Gwv8n7/+ERfGB44t1Pvm5iaZTAZFUVhfX+dv//Zv
+      kSSJzz//nIGBASzLotFo8NOf/vTUh5efnp5GURSKxSLZbJZ//Md/JJfL8eDBAyYmJtje3iYY
+      DPLuu++eWJ0OtQYQwsMyTRzXxXUcXPf4LDuO4zA/P08kEuHs2bP09/czOjq6f9Jsa2sLIQQ3
+      b94km80eqgwhBLWmze35Hf7brSX+dHcTV40yfuE6mqYhyzKxRIpYsotUTx/j568SDAYYnrzE
+      l4sV/u2rNTbz9SMPGo7jsLS0hGmaXL9+na6uLsLhMIZh0Gw2KRQKGIZBMpmkWq0eqazXTbPZ
+      JJvNUqvVeP/99+np6UGWZUqlEq7rsrGxQSwWwzTNYy3X8zwWFhZwXZfbt29Tr9cBePjwId98
+      883hVKBmZYeVjMHwUJqttRWEEuD8+alj2QzzPI9UKsX9+/fZ2dmhq6sLx3FwHIeuri5isRiW
+      ZfHll1/yq1/96iXvLdjM13m0ViBTaCDLErIkoakvNg5IkoSqSBRrJn/4Zp2eRJB3JnoY6oke
+      pqmUSiWazSYbGxtMTk7ud4piscj58+dZXl5G13UANO10x2fa2trCsiyWl5eJRqNMTk4CkM/n
+      uXHjBrdv30ZRlGMXgNnZWR4/fkwul6PRaACtPnb//n1+9rOfHU4FakWFyIAKGgk0mqTHzqBL
+      0rGZQZ/U58m0365+L6oS1Jo2sxtF5jZKNEznhTv8i2A7Hl2xAO+d7WUkHX1pNUUIQblcBiAe
+      j9NoNJAkibm5OcbGxrBtm0ajwdjY2LHV+XXhui71eh3XdUmlUuRyOeLxOHfv3uXKlSvs7u4S
+      DAbp6zue/NSO4/Cb3/yGfD7P4OAgv/zlL3n8+DE/+clPEELwpz/96XAC0KiW2M7uoocTewky
+      wpydHIMT2AcQQuCJlu7uuB6W42FaLobtYtouhuVg2h6G7WDZHoblkKsY+6P9q6qT6wmSEZ1r
+      Ez2M9caQ/aDCbwwLCwukUinu3r3L5cuXURSF+fl5JEl6MxfB37/nSrbK9HoR03axnFbHd12B
+      t5eRRpKklvolsf/z61owOq5HLKQx2hsDQJIA0XIT8TyB2PvsyeN2PY+92rcy7ACaKhMLasTC
+      OpGgSjigoioyiiyd+oUwgOsJClWD5UyFSFCjLxkiEQkc68z8onRcAyw+vkOga5hkPEE0rJ9k
+      nfbxPMHXC7s8XiugfC9lqyxLyG1WHfVqGSE8jEZrqu0dHMVzXdaXZhgaP0c5v4OqaSS6el9J
+      Z1IVmablMrtROvQ9WqmmwBUC9gRcVxUCmkwkqO0JhUYspBELa0SDGqFAK4SNJL0+4e/Ek/bk
+      qwYLW2U2c3UqTQtNkVvt9Dw0VSEZ1emJhxjsCtOTCBLU24flOQyeEHiewLBcGqaD7XrYjttZ
+      ADbWFtDKTRpDU5wb7T2WSrwMTdPhz/c32S0bBzp/J4QQrMw9JBKL06i1rCbpgRHWl6bp6R9h
+      4eHX6MEQjm2R6Dr5Nr0o0l5H/q6Ae0LQtFyalkuusveZ14rF5InWgBDSFEKB1owRCWqEgyrR
+      oEYiohMJaoR05USFw/UEmWKDpe0ym/k6TdNBVeR9gW61FWS59XOpZlGsmsysF/GEIBbS6Y4H
+      6U0EGeyOkIwEnqlaCiEwbJdqw6Jct6g0bGqGTa1pUzdtmqaD44rWIEHrGXcUgJGxc8ytFbjR
+      Jkfwq2an1OTje5tYjvtSunRmfQnLbNKoVwiFowjPQ3gePX3DbK3OYzTrxBJd+yrHcVEtFbj3
+      xUdcfPenbCzPkuzqZWTyIiuzD9heX2Ro7CzVcoGRiYsku49P8GRZ2u88AI4nqDZtKg1r/zNP
+      gOu28njKkkQ4qBIJqIT3ZpJosDWDRMMaQU0hoCmoyuFVEcf12Co0WNwqs5Gr4bgCVWmpbpr6
+      /KxDTyxtAKbtspmrsZmr8dfZHRRFJh0P0h0PkooFaJoOtaZNtdnq6HXDbnVwQFW/HT6eCL0i
+      y3y/aR0FYHVji/7eAWzHhcDJbBgLIZhZL/HXuR3kQ0zlA6OTpAdGKRd3KeV38FyHRr2KLEkI
+      ITh39SY7W6to+vGpdJ7nsfD4G4LhKPFUD7HCLsMT55FlmZHJCyiqguu6nLv6Abvb68cqADvb
+      a8TiXVRKeYTw6B8ep1GrsLW6wPD4ObJbayRSPU+VaTseJceiVLf21xxiTz0ACVkGTZEJ6q2Z
+      JKgrBHWVyJ7gPPlZVxU0VUZVZEzbJVNosJytsJmvYzve/npFU4822DzpA7rWEp5CzSRfNVpr
+      KImn1nvtOvjz6NizZeGxs7PD4NhZ4NV7d9qOxxczGZYyVZQjWFBUTaO7d5Du3qf9dc5f+wCA
+      8fPXjlTP7yNJEhMXrrO28BjHttD1IJIkU6sUKexsMzR+nuz6MvMPvmL07OVjK9c0GmytLNA3
+      PMba/CNGpy4jhEBRVdIDI6zMPSTRlWY301novjUeSE91HE9Aw3RomK3I4E90eEHrf08IZElC
+      VWQ0RcZyXFxP7Hf6o8wgL8ITFfE4aFvT+bkZZFnGsiw65Lw+VmpNm3/7apXlI3b+14EkSSS6
+      0lz94BeEwtH90T8aTzE6dQlV1RgaP8eVmz8nnuw+tnK31xZxHZvCzhbJnj5qlSJCeDTrVYq5
+      LINjZ1EUFVk6+IqFEEzf/QIhBFtrixRzrR31XGaDxem7NGoVHn/zGY1aZb+NsiyhyK0RX1e/
+      VZNs19vv9K9qfSGEx+d/+h84tsX60gzLsw/2n8HXn/6e7fUlHt7+hK3VhZe+d8f8AKGg1poe
+      O1xY3NmkUDXY3lhlM7P70gU/YW23yn//fJlKw/Jt5y/B2LmrXHrvQ8bPXyMciRGOxqlXyzRq
+      VWzLRAJqlWLb0X97bRHTaGA2G1SKOerVlsVqefY+ruOwtbrAhRs/JrOxfOBaz/Mo5rLUKkXW
+      Fqf3k6NvrsxRLuxiNOtkN1ePNQjy1uoiiVQPjXoV17H3Px8YnSTRlcZzHaYuv4vRrL/0vTur
+      QHJLOuqNJnwvUbZjNSmWSyiuBo6O4jRwJQlVkpBlGfkFrDZCwN3FHe4t5/fMd37nf1lC4ZYL
+      Rjga3/8slvjWaBHrMONUywUqhV3Wl6ZxbIvibobh8fNE40kSXT1k1pcw6lWkNrPHxvIslUKO
+      yUs30DSdXGaDnr4hUj39LM3cR9cDBCNRmvXqU/U6CrIiU9jdJhyNYzYblIs5+obH8ByHaDxJ
+      MBRmde4RgUM4RnYUgJ6hs5wZl3EDwQPflfI5bMemXKqQCAQAF55aUD1bb7Icj08ebrGRq586
+      ledt4Py1DxgaO0cklsBzXSyz2bJSTV6ilMty5f2fs740zejkxaeus0yDrdV5LNNg3LtGMZdh
+      YGQSSZYpFXaRZRlV14nGk1hm89gEYGBkkr7BMaS9gVV4Hp7wkIMykXgSSZIIRWLo+sG++jw6
+      7gR/+vG/Y7syF979MQNdsQMXeo5Jw5Iwa3k8NUy6K/FCO8H5isHH9zdpmo4/6p9SMuvLCASV
+      wi59w+PIskx2cwVZUQlHYpQLu5y79sELaQKvm44CMHP/Nuu7dT782d8Q1l8sa/zzBGApU+Gz
+      x5l99wUfn9dNRxEt1EyuT/WzkckfW2F/nWlZG/zO7/Om0FEAuuJhljMV+noSJ1kfH58TpeMi
+      eDdfIBmNUizXSYSPZyOsUi6wvjxPoitNrVzEaDa4/N6HlPJZtteWOHP2MmuLj0mk0gyemTqW
+      Mn18nkXHGeC9996nZ2iCM/3H5wsUicb3LURnzl0hGk8gSRLFXJazV95j8fEd+obGD2XP9fE5
+      DG1ngOnHD3E9wfj4BK7nHdvWtmk0GRo7S2Z9iUatyujURTyvFWWhlN8hHEtQKeawreM9Fufj
+      04m2Pbs/3U0ul2NxcZG6Ybf7k0OhKAqlXJbx89cZGJlAVTWa9Spnpi7hODaTF28QiSUYO3vl
+      2Mr08XkWbWeAVHoAVdwjs71Fz9A4icjTawCzUWVjOwtKALtewlNDXDz/fJ09EAwzOnUJYN8j
+      M7KXbXJgZAJo+e/7+JwUz3CFUNC19g5OejCM7NlIQQ0t2o9GE1eS0P1M8T6njI4CcPOnv0SW
+      FZQ2+n+zXsWTdSRbxmru0FBD9PuZ4n1OIR0F4NHdv1I1PIbGzjI+0v/UGapwh0TZftf2OW10
+      NO8YhoGih2jkN6kf3zrYx+eNou0M4HkevUNj9HfHKVka0dMdlMzHpyNtZ4BCdo07d+7w9YMF
+      4rFIuz/x8XkraCsAxapBbzJCuZSn9p0IAz4+bxttBcCqFSk3/Tj4Pm8/bQUgEOsiFdVRFOXY
+      Tt/7+LyJtF0ET0yeJaQpbOdK+/FYvosQHsV8nmiiC8esI5QAkZCfGM/n9NFWAGRZZmHmDl6o
+      j2KlQSr69FlLy2iAorK2topwPSQJJs4eT34AH5+TpK0AGM0G4xffZ3lxiWQsfOB7TdMpbWYY
+      GO4llzXQaOL5rhA+p5C2ArC2NMtGtghIuG0iPFQKOxgeNJsgnBKGGkbxXSF8TiFtBUAJRAjK
+      OSqGuxcz8mmSvcMk9+It9aS+DX3hd22f00ZbK9Dk1Dkco0KlWsOwfXOoz9tLR1+g9MAw4YCG
+      8HwB8Hl76SgAjYZB/8gEA93HE93Lx+dNpKMAqKrK7tYKuXLjJOvj43OidDwP0D84QrVp76ey
+      8fF5G2krAB//7l8peAkG+1L0JF4+4q6Pz2mhrQr0N3/3f/DexTPUSgVyleaB713b5NH0LCBY
+      X1lkZX3bN4H6nErazgCaHmBs6jxjU+fbXiTJCoGABph4UhTNM/AkCc3fCfY5ZRwq+50kK0gI
+      PKFg2w1cPPB3gn1OIYcSAKtZQ5ZkcoUafT1xPDWMgr8T7HP6OJQABMIxxscPJs3w8TltvPkp
+      PHx8XiG+APj8oDmyADxJk+njcxo5ogB4zD5+yPTsgr8A9jmVHGoR/C0G4b3guM7Rb+bjc+Ic
+      cQYIYTZ3qFiu3/l9TiVH7LcSZy9c3v/teWqQgLYnzHx8Xhf7eYINwziWxawkSR3vk6uYOB12
+      iWVZfmaG+Wfd91nXPuu6o1wrSTIIgegg9oetL/uxNY67rRKyJOGJl7/2tL0bWZLxhKDTM/zu
+      tfszwLOyu78Mz6r0cLBzKntFUTq6UDyP13Ht8zrFqyjzqNcets5v87s59n2A7xZsmQauJ7CM
+      BtVaA6NRY3d3l3rToFwsUCxX9//2+w01DAOEoFYpY1gOtmlQLFcRQlAuFXG/o0p991ohPAzD
+      RHgexWIRTwjqtQr1poFlNNjdzWG7XttrXdvEdjwcy6RUaZVVKhZwPIHZrFNvfpu87/sP+MkM
+      2qxXaTRNXMeiWKoghEchl6NSa7Qt03Nt8oUinoBquYTtelhGg1qjifBciqXyUyPdd681m3XK
+      1dpTf1erlLFsd/85tH83gmq5RNOwsE2DSq2BEB6lUqn1vKqt59X2+XouhUIBx/Wo1yoYloNj
+      m5SrdTzXIZ/Pd3y+tmXsP5NSqYS797yaZiv+bKNef2rM/vZaQaNWodYwcB1r/9086Qe1Sol8
+      sdz23Tx5h5bjYjRqNJomnutQLFWA76hAx23LF67D7ON79I5fpZBZA9eld3gEq5qn7upU8lmG
+      xyZIxaMHrjUbVR7OrXD1/Cjr2Sq22USRXAKqgiepqKEwtuUyPjp44NpiboftfJmuiI4cCFFt
+      GFj1BpIkoWkQiqbo7U2jyk+H8RJCsDF/D9F1Fqe8TUCFqgGp7iSVShUcB4CJc2f5vq+razX5
+      +sE071+/xMLyNp5joQdUogEJS+jkyk0mx0eIhQ/OgJVSAcusUSzZqJEwnm0iHBvhCYIhDV3X
+      sKUow30HE5LkczvkdwoEIgGCAZWmAS4gXJdULMhuuc6Fs5MHrnNti0K5QqFQQt1zzw0ENBRd
+      x3JVwjoUCmXOnT97INhZo1qmaTYplpogSQjhoUouiiwTTaXBNSmUDaYmDuZ6KxZyVEslPElG
+      C4WxbQer0USSZUaHe/n6m2lufvgB34/GL4Qgt7tDoVBG12V0Vcb1ZAiEcEybZjVP39AYPV0H
+      k7pbzTqVhkmxVATHA0lC1ySCAQXL1V7dTrCkqPT3pkGSCKgyjWodoWo0DIehgTRDQwNkNjdp
+      N1EFwjFSiQiKFkRYDRoNA0WWqBkWtuWS7kujCKdtuameXoK6QjQaoVKpYjaaeK6NB/T3DyLM
+      CrniwTzEkiTR39+PJEmEgzr1ZhNFUamUK5hGjUAgRiwQoF2pih6itzsFsoqKQ6NWJxAKUDcM
+      mpbKcG+CrY3NtvUNaCqlmksyGqSnN40mu+h6hEQwSFMopPvSeKbR9lrJcwmlupBQ6O1L06yU
+      Saa60VWZ7t5+dLV9rD5ZVTFqFdL9vWh6iFQkTM32SPelkRwbx2jQle5tG+lPD+iUSnXS6RjR
+      WIqApiKrAboScTxJplwqoHdQp1UZPDWELrfaJbkNgqEkYV1jZm4OcKhU2x/BdW2DZLoXRdHp
+      6U5RLtRI9/WiSi5Dw8Psbm21fTeaHqBSzDMwmCYQjBMN6NiyRm9fmuJW5tUJgOuYZHcL5HZ3
+      CQYDhLu6iCoeejiBjEO5WEEPhto+5Hq1SKlYolBuoGsKvf196JqGqmp0p5OszM0TbJOiCSCX
+      3aJULGELBYTHwNAAmqahaTr1epW64RBpk/leCI/N7V2KuSyaHkBSQgwNppGFR//AGHg1qi7o
+      bcq0mjWKxSLZXJlgUCXV108sGMR2Vfp7o5TLFUKR9nkWtjMZJEkQiEXZWl5EDSaRMSjaLv2x
+      IPNzKyR6Um2u9Mhkd3EMg1g0yNzcKoPjYxSy60hakJ3tDUrFUtuwNla9TLFmYjQtVNlht24y
+      1J1gcW6JcCzEbqGC0TTaLiFz2Qwu4KFTL2cQik5Qhc1cGU3YeKjIcnvBy2xn8RybaDLG8twC
+      4cQArlXAlBSuXX+PqYlxEm0iESJsdnaKmM0moYDMysYuE+dGWZ2bQ4/EqJTKKIFA285cLWRp
+      uhLNpkC4ZeqeRFdIY25+nYmrF/n/AQTojByjEdtQAAAAAElFTkSuQmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
